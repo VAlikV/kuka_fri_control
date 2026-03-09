@@ -112,7 +112,7 @@ int main(int argc, char **argv)
 
         std::cout << "Torque: " << current_torque.transpose() << std::endl;
 
-        msg_torque << 0, current_point, current_torque;
+        msg_torque << current_point, current_torque;
 
         server.setMsg(msg_torque);
 
